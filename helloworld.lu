@@ -1,9 +1,11 @@
 #head |section to declare entites|
 
-test
-test2
+test = square |square is the base but can be a custom type|
+test2 = square
 
-#body |section to describe entities|
+#init |section to describe entities|
+
+#loop |section to update entities every frame|
 
 
-#footer |section to describe actions on entities|
+#async |section to describe actions on entities|
