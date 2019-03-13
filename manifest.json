@@ -1,0 +1,25 @@
+ {
+	"name": "LU",
+	"version": "0.1",
+	"description": "Lightweight UI - New graphic web standard, official handling of .lu files",
+	"permissions": ["activeTab", "storage"],
+	"background": {
+      "scripts": [
+      	"background.js"
+      ],
+      "persistent": false
+    },
+    "content_scripts": [
+    	{
+	    	"css": ["render.css"],
+		    "js": ["entity.class.js", "render.js"],
+		    "matches": ["*://*/.lu"]
+  		},
+  		{
+	    	"css": ["render.css"],
+		    "js": ["entity.class.js", "render.js"],
+		    "matches": ["file:///*.lu"]
+  		}
+  	],
+	"manifest_version": 2
+ }
