@@ -12,12 +12,12 @@
     "content_scripts": [
     	{
 	    	"css": ["render.css"],
-		    "js": ["entity.class.js", "render.js"],
+		    "js": ["vector.class.js", "entity.class.js", "render.js"],
 		    "matches": ["*://*/.lu"]
   		},
   		{
 	    	"css": ["render.css"],
-		    "js": ["entity.class.js", "render.js"],
+		    "js": ["vector.class.js", "entity.class.js", "render.js"],
 		    "matches": ["file:///*.lu"]
   		}
   	],

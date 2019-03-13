@@ -6,17 +6,35 @@ class Entity{
 		this.canvas = null;
 		this.context = null;
 
-		this.x = 0;
-		this.y = 0;
+		this.position = new Vector();//Global if parent == null, local if parent != null
+		this.parent = null;
+
+		this.dimension = new Vector();
+
+		this.content = "";
 	}
 
-	init(canvas){
+	create(canvas){
 		this.canvas = canvas;
 		this.context = this.canvas.getContext("2d");
 	}
 
 	render(){
-		/*this.context.fillStyle = "#FF0000";
-		this.context.fillRect(this.x, this.y, 150, 75);*/
+		let globalPosition = this.getGlobalPosition();
+
+		switch(this.type){
+			case "square":
+				this.context.fillStyle = "#FF9999";
+				this.context.fillRect(globalPosition.x - (this.dimension.x/2.0), globalPosition.y - (this.dimension.y/2.0), this.dimension.x, this.dimension.y);
+			break;
+		}
+	}
+
+	getGlobalPosition(){
+		if(this.parent != null){
+			let parentPosition = this.parnet.getGlobalPosition();
+			return parentPosition.add(this.position);
+		}
+		return this.position;
 	}
 }

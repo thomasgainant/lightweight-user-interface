@@ -1,11 +1,37 @@
-#head |section to declare entites|
+#head ~section to declare entities~
 
-test = square |square is the base but can be a custom type|
-test2 = square
+menu = square ~square is the base but can be a custom type~
 
-#init |section to describe entities|
+l = square
+ll = square
 
-#loop |section to update entities every frame|
+u = square
+uu = square
+uuu = square
 
+#init ~section to describe entities~
 
-#async |section to describe actions on entities|
+menu.position = (50%-, 300, 0)
+menu.dimension = (100%-, 25%|, 0)
+
+~l.parent = test~
+l.position = (25%-, 72%|, 100)
+l.dimension = (10%-, 50%|, 0)
+
+ll.position = (42.5%-, 92%|, 100)
+ll.dimension = (25%-, 10%|, 0)
+
+u.position = (65%-, 72%|, 100)
+u.dimension = (10%-, 50%|, 0)
+
+uu.position = (80%-, 72%|, 100)
+uu.dimension = (10%-, 50%|, 0)
+
+uuu.position = (70%-, 92%|, 100)
+uuu.dimension = (20%-, 10%|, 0)
+
+#loop ~section to update entities every frame~
+
+test.x++
+
+#async ~section to describe actions on entities~
